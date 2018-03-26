@@ -4,16 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
     }
 
     // Variables para inicializar el juego
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView counter = (ImageView) view;
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
         if (gameState[tappedCounter] == 2){
-            counter.setEnabled(false);
+            //counter.setEnabled(false);
             //TODO: Hacer que no se puedan sobreescribir las tiradas
         }
         int player = yellowPlayer? 1:0;
@@ -59,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "El ganador es el color " + winner + "!!!", Toast.LENGTH_SHORT).show();
             }
         }
-    //TODO: Poder Resetear el juego
+        //TODO: Poder Resetear el juego
     }
+
 }

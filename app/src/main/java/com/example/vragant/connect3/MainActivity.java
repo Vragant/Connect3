@@ -61,4 +61,12 @@ public class MainActivity extends AppCompatActivity {
         }
     //TODO: Poder Resetear el juego
     }
+
+    public void recreateActivity(View view) {
+        App.refreshApp(this);
+    }
+
+    public void finishActivity(View view) {
+        App.finishApp(this);
+    }
 }
